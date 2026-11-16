@@ -1,0 +1,407 @@
+{
+  "dataset_total_rows": 336,
+  "dataset_units": 48,
+  "dataset_periods": 7,
+  "total_morosos": 142,
+  "tasa_morosidad_global": 42.26,
+  "train_rows": 288,
+  "train_morosos": 123,
+  "test_rows": 48,
+  "test_morosos": 19,
+  "coherencia_checks": {
+    "1_escala_negocio_unidades": true,
+    "1_escala_negocio_cuota_fija": true,
+    "1_escala_setiembre_47_pagos": true,
+    "2_rangos_sin_negativos": true,
+    "2_rangos_cuota_max": true,
+    "3_consistencia_target": true,
+    "4_relacion_plausible_retraso": true,
+    "5_origen_rotulado": true,
+    "6_minimo_clase_minoritaria": true
+  },
+  "models_table": [
+    {
+      "Modelo": "Línea Base 1: DummyClassifier (Clase Mayoritaria)",
+      "Hiperparametros": "strategy='most_frequent'",
+      "Train_Recall": 0.0,
+      "Train_F1": 0.0,
+      "CV_Recall": 0.0,
+      "CV_F1": 0.0,
+      "Test_Accuracy": 0.604,
+      "Test_Precision": 0.0,
+      "Test_Recall": 0.0,
+      "Test_F1": 0.0,
+      "Test_AUC": 0.5,
+      "cm_test": [
+        [
+          29,
+          0
+        ],
+        [
+          19,
+          0
+        ]
+      ]
+    },
+    {
+      "Modelo": "Línea Base 2: Regla Empírica Actual (Deuda >= 1 o Retraso > 20d)",
+      "Hiperparametros": "Regla manual: deuda >= 1 o retraso_ant > 20",
+      "Train_Recall": 0.764,
+      "Train_F1": 0.862,
+      "CV_Recall": 0.764,
+      "CV_F1": 0.862,
+      "Test_Accuracy": 0.854,
+      "Test_Precision": 0.833,
+      "Test_Recall": 0.789,
+      "Test_F1": 0.811,
+      "Test_AUC": 0.843,
+      "cm_test": [
+        [
+          26,
+          3
+        ],
+        [
+          4,
+          15
+        ]
+      ]
+    },
+    {
+      "Modelo": "Regresión Logística Regularizada (U3-S13)",
+      "Hiperparametros": "{'C': 0.25, 'penalty': 'l2', 'class_weight': 'balanced'}",
+      "Train_Recall": 0.943,
+      "Train_F1": 0.955,
+      "CV_Recall": 0.951,
+      "CV_F1": 0.96,
+      "Test_Accuracy": 0.875,
+      "Test_Precision": 0.783,
+      "Test_Recall": 0.947,
+      "Test_F1": 0.857,
+      "Test_AUC": 0.935,
+      "cm_test": [
+        [
+          24,
+          5
+        ],
+        [
+          1,
+          18
+        ]
+      ]
+    },
+    {
+      "Modelo": "SVM con Kernel RBF (U3-S14)",
+      "Hiperparametros": "{'C': 0.25, 'gamma': 0.05, 'kernel': 'rbf', 'class_weight': 'balanced'}",
+      "Train_Recall": 0.943,
+      "Train_F1": 0.951,
+      "CV_Recall": 0.943,
+      "CV_F1": 0.952,
+      "Test_Accuracy": 0.875,
+      "Test_Precision": 0.783,
+      "Test_Recall": 0.947,
+      "Test_F1": 0.857,
+      "Test_AUC": 0.935,
+      "cm_test": [
+        [
+          24,
+          5
+        ],
+        [
+          1,
+          18
+        ]
+      ]
+    },
+    {
+      "Modelo": "KNN Clasificador (U3-S14)",
+      "Hiperparametros": "{'n_neighbors': 13, 'weights': 'uniform', 'metric': 'euclidean'}",
+      "Train_Recall": 0.911,
+      "Train_F1": 0.933,
+      "CV_Recall": 0.919,
+      "CV_F1": 0.942,
+      "Test_Accuracy": 0.875,
+      "Test_Precision": 0.783,
+      "Test_Recall": 0.947,
+      "Test_F1": 0.857,
+      "Test_AUC": 0.932,
+      "cm_test": [
+        [
+          24,
+          5
+        ],
+        [
+          1,
+          18
+        ]
+      ]
+    },
+    {
+      "Modelo": "Árbol de Decisión Podado (U3-S14)",
+      "Hiperparametros": "{'max_depth': 2, 'min_samples_leaf': 6, 'class_weight': 'balanced'}",
+      "Train_Recall": 0.951,
+      "Train_F1": 0.951,
+      "CV_Recall": 0.959,
+      "CV_F1": 0.944,
+      "Test_Accuracy": 0.896,
+      "Test_Precision": 0.792,
+      "Test_Recall": 1.0,
+      "Test_F1": 0.884,
+      "Test_AUC": 0.926,
+      "cm_test": [
+        [
+          24,
+          5
+        ],
+        [
+          0,
+          19
+        ]
+      ]
+    },
+    {
+      "Modelo": "Gradient Boosting (U3-S14)",
+      "Hiperparametros": "{'n_estimators': 30, 'learning_rate': 0.05, 'max_depth': 2}",
+      "Train_Recall": 0.951,
+      "Train_F1": 0.951,
+      "CV_Recall": 0.959,
+      "CV_F1": 0.944,
+      "Test_Accuracy": 0.896,
+      "Test_Precision": 0.792,
+      "Test_Recall": 1.0,
+      "Test_F1": 0.884,
+      "Test_AUC": 0.927,
+      "cm_test": [
+        [
+          24,
+          5
+        ],
+        [
+          0,
+          19
+        ]
+      ]
+    }
+  ],
+  "selected_model": "Regresión Logística Regularizada (U3-S13)",
+  "selected_metrics_test": {
+    "Accuracy": 0.875,
+    "Precision": 0.783,
+    "Recall": 0.947,
+    "F1": 0.857,
+    "AUC": 0.935,
+    "cm": [
+      [
+        24,
+        5
+      ],
+      [
+        1,
+        18
+      ]
+    ]
+  },
+  "error_cases_test": [
+    {
+      "unidad": "A-302",
+      "periodo": "2026-10",
+      "meses_deuda_previos": 0,
+      "retraso_mes_anterior": 28,
+      "promedio_retraso_3m": 31.0,
+      "tasa_puntualidad_hist": 0.0,
+      "indice_deterioro_pago": 29.35,
+      "canal_pago_habitual": "transferencia_nombre",
+      "moroso": 0,
+      "pred_moroso": 1,
+      "prob_moroso": 0.961
+    },
+    {
+      "unidad": "B-201",
+      "periodo": "2026-10",
+      "meses_deuda_previos": 0,
+      "retraso_mes_anterior": 16,
+      "promedio_retraso_3m": 27.67,
+      "tasa_puntualidad_hist": 0.125,
+      "indice_deterioro_pago": 21.25,
+      "canal_pago_habitual": "transferencia_nombre",
+      "moroso": 0,
+      "pred_moroso": 1,
+      "prob_moroso": 0.883
+    },
+    {
+      "unidad": "B-203",
+      "periodo": "2026-10",
+      "meses_deuda_previos": 0,
+      "retraso_mes_anterior": 34,
+      "promedio_retraso_3m": 35.33,
+      "tasa_puntualidad_hist": 0.0,
+      "indice_deterioro_pago": 34.6,
+      "canal_pago_habitual": "deposito_efectivo",
+      "moroso": 0,
+      "pred_moroso": 1,
+      "prob_moroso": 0.997
+    },
+    {
+      "unidad": "C-201",
+      "periodo": "2026-10",
+      "meses_deuda_previos": 0,
+      "retraso_mes_anterior": 13,
+      "promedio_retraso_3m": 10.33,
+      "tasa_puntualidad_hist": 0.0,
+      "indice_deterioro_pago": 11.8,
+      "canal_pago_habitual": "transferencia_nombre",
+      "moroso": 1,
+      "pred_moroso": 0,
+      "prob_moroso": 0.392
+    },
+    {
+      "unidad": "D-101",
+      "periodo": "2026-10",
+      "meses_deuda_previos": 0,
+      "retraso_mes_anterior": 2,
+      "promedio_retraso_3m": 14.33,
+      "tasa_puntualidad_hist": 0.0,
+      "indice_deterioro_pago": 7.55,
+      "canal_pago_habitual": "yape_plin",
+      "moroso": 0,
+      "pred_moroso": 1,
+      "prob_moroso": 0.543
+    },
+    {
+      "unidad": "D-201",
+      "periodo": "2026-10",
+      "meses_deuda_previos": 0,
+      "retraso_mes_anterior": 26,
+      "promedio_retraso_3m": 19.67,
+      "tasa_puntualidad_hist": 0.0,
+      "indice_deterioro_pago": 23.15,
+      "canal_pago_habitual": "yape_plin",
+      "moroso": 0,
+      "pred_moroso": 1,
+      "prob_moroso": 0.94
+    }
+  ],
+  "feature_importance": [
+    {
+      "Variable": "promedio_retraso_3m",
+      "Importancia_Media": 0.0111,
+      "Importancia_Std": 0.0148
+    },
+    {
+      "Variable": "tasa_puntualidad_hist",
+      "Importancia_Media": 0.0062,
+      "Importancia_Std": 0.0082
+    },
+    {
+      "Variable": "retraso_mes_anterior",
+      "Importancia_Media": 0.0045,
+      "Importancia_Std": 0.0076
+    },
+    {
+      "Variable": "indice_deterioro_pago",
+      "Importancia_Media": 0.0022,
+      "Importancia_Std": 0.0047
+    },
+    {
+      "Variable": "meses_deuda_previos",
+      "Importancia_Media": 0.001,
+      "Importancia_Std": 0.0026
+    },
+    {
+      "Variable": "canal_pago_habitual",
+      "Importancia_Media": 0.0009,
+      "Importancia_Std": 0.0021
+    },
+    {
+      "Variable": "bloque",
+      "Importancia_Media": 0.0008,
+      "Importancia_Std": 0.0015
+    },
+    {
+      "Variable": "ratio_pago_anterior",
+      "Importancia_Media": 0.0004,
+      "Importancia_Std": 0.0017
+    }
+  ],
+  "coef_table": [
+    {
+      "Feature": "promedio_retraso_3m",
+      "Coeficiente": 0.9678
+    },
+    {
+      "Feature": "retraso_mes_anterior",
+      "Coeficiente": 0.8415
+    },
+    {
+      "Feature": "indice_deterioro_pago",
+      "Coeficiente": 0.7341
+    },
+    {
+      "Feature": "tasa_puntualidad_hist",
+      "Coeficiente": -0.6661
+    },
+    {
+      "Feature": "canal_pago_habitual_transferencia_nombre",
+      "Coeficiente": -0.6375
+    },
+    {
+      "Feature": "canal_pago_habitual_yape_plin",
+      "Coeficiente": 0.5487
+    },
+    {
+      "Feature": "canal_pago_habitual_deposito_efectivo",
+      "Coeficiente": 0.5032
+    },
+    {
+      "Feature": "bloque_B",
+      "Coeficiente": 0.4332
+    },
+    {
+      "Feature": "canal_pago_habitual_codigo_descripcion",
+      "Coeficiente": -0.4144
+    },
+    {
+      "Feature": "meses_deuda_previos",
+      "Coeficiente": 0.311
+    },
+    {
+      "Feature": "ratio_pago_anterior",
+      "Coeficiente": -0.3036
+    },
+    {
+      "Feature": "bloque_D",
+      "Coeficiente": -0.2644
+    },
+    {
+      "Feature": "bloque_C",
+      "Coeficiente": -0.2072
+    },
+    {
+      "Feature": "bloque_A",
+      "Coeficiente": 0.0383
+    }
+  ],
+  "sample_input_mvp": {
+    "unidad": "A-101",
+    "periodo_objetivo": "2026-11",
+    "cuota": 280.0,
+    "meses_deuda_previos": 1,
+    "retraso_mes_anterior": 31,
+    "promedio_retraso_3m": 32.33,
+    "tasa_puntualidad_hist": 0.143,
+    "ratio_pago_anterior": 0.0,
+    "indice_deterioro_pago": 58.6,
+    "canal_pago_habitual": "yape_plin",
+    "bloque": "A"
+  },
+  "sample_output_mvp": {
+    "unidad": "A-101",
+    "periodo_objetivo": "2026-11",
+    "prediccion_moroso": 1,
+    "probabilidad_mora": 0.9992,
+    "umbral_decision": 0.5,
+    "nivel_riesgo": "ALTO",
+    "accion_sugerida_mvp": "Enviar recordatorio preventivo por WhatsApp (US13) 3 días antes del día 10 y marcar alerta prioritaria en panel de Tesorería (US12)",
+    "latencia_ms": 1.11,
+    "modelo_version": "LR-v1.0-Parcela2A"
+  }
+}

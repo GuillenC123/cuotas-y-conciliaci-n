@@ -1,0 +1,87 @@
+{
+  "weights": [
+    0.31103905442509794,
+    0.8414874549162012,
+    0.9678041759003938,
+    -0.6661403229915037,
+    -0.30356580683252504,
+    0.7341485991625357,
+    -0.4143700338776622,
+    0.5032110058615196,
+    -0.6375056559559501,
+    0.5486613272380791,
+    0.0382718901360697,
+    0.43324580698068826,
+    -0.20715190797362074,
+    -0.2643691458771507
+  ],
+  "intercept": 0.09486952712306838,
+  "threshold": 0.5,
+  "version": "LR-v1.0-Parcela2A",
+  "num_cols": [
+    "meses_deuda_previos",
+    "retraso_mes_anterior",
+    "promedio_retraso_3m",
+    "tasa_puntualidad_hist",
+    "ratio_pago_anterior",
+    "indice_deterioro_pago"
+  ],
+  "cat_cols": [
+    "canal_pago_habitual",
+    "bloque"
+  ],
+  "medians": {
+    "meses_deuda_previos": 0.0,
+    "retraso_mes_anterior": 4.0,
+    "promedio_retraso_3m": 6.0,
+    "tasa_puntualidad_hist": 0.0715,
+    "ratio_pago_anterior": 1.0,
+    "indice_deterioro_pago": 5.45
+  },
+  "means": {
+    "meses_deuda_previos": 0.22916666666666666,
+    "retraso_mes_anterior": 11.54861111111111,
+    "promedio_retraso_3m": 10.26871527777778,
+    "tasa_puntualidad_hist": 0.33260416666666665,
+    "ratio_pago_anterior": 0.8767361111111112,
+    "indice_deterioro_pago": 15.571736111111115
+  },
+  "stds": {
+    "meses_deuda_previos": 0.5555121510822243,
+    "retraso_mes_anterior": 13.138329137125165,
+    "promedio_retraso_3m": 11.194174425022247,
+    "tasa_puntualidad_hist": 0.3604493187280672,
+    "ratio_pago_anterior": 0.2879171607837321,
+    "indice_deterioro_pago": 19.53116808711218
+  },
+  "cat_categories": {
+    "canal_pago_habitual": [
+      "codigo_descripcion",
+      "deposito_efectivo",
+      "transferencia_nombre",
+      "yape_plin"
+    ],
+    "bloque": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  "feature_names": [
+    "meses_deuda_previos",
+    "retraso_mes_anterior",
+    "promedio_retraso_3m",
+    "tasa_puntualidad_hist",
+    "ratio_pago_anterior",
+    "indice_deterioro_pago",
+    "canal_pago_habitual_codigo_descripcion",
+    "canal_pago_habitual_deposito_efectivo",
+    "canal_pago_habitual_transferencia_nombre",
+    "canal_pago_habitual_yape_plin",
+    "bloque_A",
+    "bloque_B",
+    "bloque_C",
+    "bloque_D"
+  ]
+}

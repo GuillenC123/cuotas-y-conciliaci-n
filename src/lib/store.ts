@@ -26,7 +26,7 @@ export interface Repo {
 const vacia = (): DB => ({ config: null, unidades: [], movimientos: [], lotes: [], reportes: [], egresos: [] });
 
 // ---------------- LocalStorage ----------------
-const LS_KEY = "cuotas-vigilancia-db-v1";
+const LS_KEY = "cuotas-vigilancia-db-v2";
 
 class LocalRepo implements Repo {
   private leer(): DB {

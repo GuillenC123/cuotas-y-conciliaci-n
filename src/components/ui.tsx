@@ -14,6 +14,9 @@ const COLORES: Record<string, string> = {
   pendiente: "bg-red-50 text-red-700 border-red-200",
   revisar: "bg-orange-50 text-orange-800 border-orange-200",
   duplicado: "bg-slate-100 text-slate-600 border-slate-300",
+  riesgo_alto: "bg-red-100 text-red-800 border-red-300 font-semibold",
+  riesgo_medio: "bg-amber-100 text-amber-800 border-amber-300 font-semibold",
+  riesgo_bajo: "bg-emerald-100 text-emerald-800 border-emerald-300 font-semibold",
 };
 const TEXTOS: Record<string, string> = {
   conciliado: "Conciliado",
@@ -25,6 +28,9 @@ const TEXTOS: Record<string, string> = {
   pendiente: "Pendiente",
   revisar: "Por revisar",
   duplicado: "Duplicado",
+  riesgo_alto: "Riesgo Alto",
+  riesgo_medio: "Riesgo Medio",
+  riesgo_bajo: "Riesgo Bajo",
 };
 
 export function Badge({ estado }: { estado: string }) {
@@ -54,6 +60,7 @@ const NAV_ADMIN = [
   ["/admin", "Resumen"],
   ["/admin/conciliar", "Conciliar pagos"],
   ["/admin/morosidad", "Morosidad"],
+  ["/admin/alertas", "Alertas ML (US12)"],
   ["/reporte", "Reporte mensual"],
   ["/admin/egresos", "Egresos"],
   ["/admin/unidades", "Padrón"],

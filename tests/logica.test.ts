@@ -54,3 +54,15 @@ console.log("OK");
   assert.equal(solo.periodos[1].estado, "pagado");
   console.log("imputación de pagos OK");
 }
+
+// Validación de la Inferencia de Machine Learning (APF3)
+import { extraerFeaturesUnidad, inferenciaLocal } from "../src/lib/ml";
+{
+  const u101 = db.unidades.find((u) => u.codigo === "A-101")!;
+  const ft = extraerFeaturesUnidad(u101, db.movimientos, db.config!, "2026-11");
+  const pred = inferenciaLocal(ft);
+  console.log("Predicción ML A-101:", pred.nivel_riesgo, `${(pred.probabilidad_mora * 100).toFixed(1)}%`);
+  assert.ok(["ALTO", "MEDIO", "BAJO"].includes(pred.nivel_riesgo));
+  assert.ok(pred.probabilidad_mora >= 0 && pred.probabilidad_mora <= 1);
+  console.log("Inferencia ML OK");
+}
