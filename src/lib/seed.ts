@@ -34,8 +34,8 @@ export function unidadesDemo(): Unidad[] {
   const r = prng(7);
   const out: Unidad[] = [];
   const usados = new Set<string>();
-  for (const torre of ["A", "B", "C", "D"]) {
-    for (let piso = 1; piso <= 3; piso++) {
+  for (const torre of ["A", "B"]) {
+    for (let piso = 1; piso <= 6; piso++) {
       for (let d = 1; d <= 4; d++) {
         const codigo = `${torre}-${piso}0${d}`;
         let nombre = "";
@@ -77,41 +77,42 @@ function descripcionPago(u: Unidad, periodo: string, r: () => number): string {
 }
 
 // Historial de pagos de los 6 meses anteriores (ya conciliado)
-import datasetAPF3Json from "./dataset_apf3.json";
-import type { DatasetRow } from "./ml";
-
 function historialDemo(unidades: Unidad[]): Movimiento[] {
-  const mapUnidad = new Map(unidades.map((u) => [u.codigo, u]));
+  const r = prng(42);
+  const actual = periodoActual();
   const movs: Movimiento[] = [];
   let op = 81200000;
-
-  (datasetAPF3Json as unknown as DatasetRow[]).forEach((row) => {
-    if (row.monto_pagado > 0) {
-      const u = mapUnidad.get(row.unidad);
-      if (!u) return;
-
-      const parcial = row.monto_pagado < row.cuota;
-      let desc = `TRANSF DE ${u.propietario}`;
-      if (row.canal_pago_habitual === "yape_plin") desc = `YAPE DE ${u.propietario.split(" ")[0]} ${u.propietario.split(" ")[1] || ""}`;
-      else if (row.canal_pago_habitual === "deposito_efectivo") desc = `DEPOSITO EFECTIVO AG 0193`;
-      else if (row.canal_pago_habitual === "codigo_descripcion") desc = `PAGO MANT ${u.codigo} ${row.periodo}`;
-
+  const perfiles = unidades.map(() => {
+    const x = r();
+    return x < 0.6 ? "puntual" : x < 0.85 ? "tardio" : "moroso";
+  });
+  for (let k = 6; k >= 1; k--) {
+    const periodo = sumarMeses(actual, -k);
+    unidades.forEach((u, i) => {
+      const perfil = perfiles[i];
+      if (perfil === "moroso" && r() < 0.45) return; // no pagó ese mes
+      if (perfil === "tardio" && r() < 0.08) return;
+      let dia: number;
+      if (perfil === "puntual") dia = 1 + Math.floor(r() * 10);
+      else if (perfil === "tardio") dia = 8 + Math.floor(r() * 18);
+      else dia = 12 + Math.floor(r() * 16);
+      const parcial = perfil === "moroso" && r() < 0.15;
+      const monto = parcial ? 140 : u.cuota;
       movs.push({
-        id: `MH-${row.periodo}-${u.codigo}`,
-        fecha: row.fecha_pago || `${row.periodo}-08`,
-        descripcion: desc,
-        monto: Number(row.monto_pagado),
+        id: `MH-${periodo}-${u.codigo}`,
+        fecha: `${periodo}-${String(Math.min(dia, 28)).padStart(2, "0")}`,
+        descripcion: descripcionPago(u, periodo, r),
+        monto,
         operacion: String(op++),
-        periodo: row.periodo,
+        periodo,
         unidadId: u.id,
         estado: parcial ? "parcial" : "conciliado",
-        regla: row.canal_pago_habitual === "codigo_descripcion" ? "codigo" : "nombre",
+        regla: r() < 0.5 ? "codigo" : "nombre",
         loteId: "L-historico",
         creadoEn: new Date().toISOString(),
       });
-    }
-  });
-
+    });
+  }
   return movs;
 }
 

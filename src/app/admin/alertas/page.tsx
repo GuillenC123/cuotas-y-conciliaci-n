@@ -2,489 +2,320 @@
 import { useEffect, useMemo, useState } from "react";
 import { useData } from "@/components/DataProvider";
 import { Shell } from "@/components/ui";
+import { estadoUnidad, primerPeriodo } from "@/lib/morosidad";
 import {
-  extraerFeaturesUnidad,
-  inferenciaLocal,
-  enlaceWhatsAppPreventivo,
-  MLFeatures,
-  calcularIDP,
+  MODELO,
+  PrediccionML,
+  VariablesML,
+  calcularVariables,
+  enlaceWhatsApp,
+  esMoroso,
+  motivos,
+  nivelRiesgo,
+  predecirLote,
+  probabilidad,
+  registroUnidad,
 } from "@/lib/ml";
-import { soles } from "@/lib/util";
+import { nombrePeriodo, periodoActual, soles, sumarMeses } from "@/lib/util";
+
+// En local se usa la API de Python (npm run api). En la web publicada, la URL se define con
+// NEXT_PUBLIC_ML_API_URL; si no hay API, la web calcula la misma fórmula sin servidor.
+function urlApi(): string | null {
+  if (typeof window !== "undefined" && window.location.hostname === "localhost") return "http://localhost:8000";
+  return process.env.NEXT_PUBLIC_ML_API_URL || null;
+}
+
+const ESTILO_RIESGO: Record<string, string> = {
+  alto: "bg-red-100 text-red-800 border-red-300",
+  medio: "bg-amber-100 text-amber-800 border-amber-300",
+  bajo: "bg-emerald-50 text-emerald-800 border-emerald-200",
+};
 
 export default function AlertasPage() {
   const { db, cfg } = useData();
-  const [periodo, setPeriodo] = useState<string>("2026-10");
-  const [filtroRiesgo, setFiltroRiesgo] = useState<string>("todos");
-  const [busqueda, setBusqueda] = useState<string>("");
-  const [backendStatus, setBackendStatus] = useState<"checking" | "online" | "offline">("checking");
-  const backendUrl = "http://localhost:8000";
+  const actual = periodoActual();
+  const [periodo, setPeriodo] = useState(actual);
+  const [soloAlertas, setSoloAlertas] = useState(true);
+  const [motor, setMotor] = useState<"api" | "local" | "cargando">("cargando");
+  const [preds, setPreds] = useState<PrediccionML[]>([]);
 
-  // Estado del Simulador Interactivo para la sustentación
-  const [simRetrasoAnt, setSimRetrasoAnt] = useState<number>(20);
-  const [simProm3m, setSimProm3m] = useState<number>(18);
-  const [simDeudaPrev, setSimDeudaPrev] = useState<number>(0);
-  const [simTasaPuntual, setSimTasaPuntual] = useState<number>(0.2);
-  const [simRatioAnt, setSimRatioAnt] = useState<number>(1.0);
-  const [simCanal, setSimCanal] = useState<string>("yape_plin");
-  const [simBloque, setSimBloque] = useState<string>("A");
-
-  // Probar conectividad con el microservicio FastAPI en Python
-  useEffect(() => {
-    let cancelado = false;
-    async function checkHealth() {
-      try {
-        const res = await fetch(`${backendUrl}/health`, { signal: AbortSignal.timeout(1000) });
-        if (res.ok && !cancelado) setBackendStatus("online");
-        else if (!cancelado) setBackendStatus("offline");
-      } catch {
-        if (!cancelado) setBackendStatus("offline");
-      }
+  const inicio = primerPeriodo(db.movimientos);
+  const opciones = useMemo(() => {
+    const out = [actual];
+    for (let k = 1; k <= 6; k++) {
+      const p = sumarMeses(actual, -k);
+      if (p > inicio) out.push(p); // se necesita al menos un mes de historial
     }
-    checkHealth();
-    return () => { cancelado = true; };
-  }, [backendUrl]);
+    return out;
+  }, [actual, inicio]);
 
-  // Calcular características e inferencia para cada unidad activa
-  const predicciones = useMemo(() => {
-    const activas = db.unidades.filter((u) => u.activa);
-    return activas.map((u) => {
-      const ft = extraerFeaturesUnidad(u, db.movimientos, cfg, periodo);
-      const pred = inferenciaLocal(ft);
-      if (backendStatus === "online") {
-        pred.origen_motor = "FastAPI (Python)";
-      }
-      return { unidad: u, features: ft, prediction: pred };
-    }).sort((a, b) => b.prediction.probabilidad_mora - a.prediction.probabilidad_mora);
-  }, [db.unidades, db.movimientos, cfg, periodo, backendStatus]);
+  const activas = useMemo(() => db.unidades.filter((u) => u.activa), [db.unidades]);
+  const registros = useMemo(
+    () => activas.map((u) => registroUnidad(u, db.movimientos, cfg, periodo)),
+    [activas, db.movimientos, cfg, periodo],
+  );
 
-  // Filtrado de la tabla
-  const prediccionesFiltradas = useMemo(() => {
-    return predicciones.filter((p) => {
-      const q = busqueda.trim().toUpperCase();
-      const coincideTexto = !q || p.unidad.codigo.toUpperCase().includes(q) || p.unidad.propietario.toUpperCase().includes(q);
-      const coincideRiesgo =
-        filtroRiesgo === "todos" ||
-        (filtroRiesgo === "alto" && p.prediction.nivel_riesgo === "ALTO") ||
-        (filtroRiesgo === "medio" && p.prediction.nivel_riesgo === "MEDIO") ||
-        (filtroRiesgo === "bajo" && p.prediction.nivel_riesgo === "BAJO") ||
-        (filtroRiesgo === "alertas" && p.prediction.prediccion_moroso === 1);
-      return coincideTexto && coincideRiesgo;
+  useEffect(() => {
+    let vivo = true;
+    setMotor("cargando");
+    predecirLote(registros, urlApi()).then((r) => {
+      if (!vivo) return;
+      setPreds(r.predicciones);
+      setMotor(r.motor);
     });
-  }, [predicciones, busqueda, filtroRiesgo]);
-
-  // Métricas agregadas de negocio
-  const totalAltos = predicciones.filter((p) => p.prediction.nivel_riesgo === "ALTO").length;
-  const totalMedios = predicciones.filter((p) => p.prediction.nivel_riesgo === "MEDIO").length;
-  const totalBajos = predicciones.filter((p) => p.prediction.nivel_riesgo === "BAJO").length;
-  const cuotasEnRiesgo = (totalAltos + totalMedios) * (db.unidades[0]?.cuota || 280);
-
-  // Inferencia para el Simulador Interactivo
-  const prediccionSimulada = useMemo(() => {
-    const idp = calcularIDP(simRetrasoAnt, simProm3m, simDeudaPrev, simRatioAnt);
-    const ftSim: MLFeatures = {
-      unidad: "SIM-01",
-      periodo_objetivo: periodo,
-      cuota: 280.0,
-      meses_deuda_previos: simDeudaPrev,
-      retraso_mes_anterior: simRetrasoAnt,
-      promedio_retraso_3m: simProm3m,
-      tasa_puntualidad_hist: simTasaPuntual,
-      ratio_pago_anterior: simRatioAnt,
-      indice_deterioro_pago: idp,
-      canal_pago_habitual: simCanal,
-      bloque: simBloque,
+    return () => {
+      vivo = false;
     };
-    return inferenciaLocal(ftSim);
-  }, [simRetrasoAnt, simProm3m, simDeudaPrev, simTasaPuntual, simRatioAnt, simCanal, simBloque, periodo]);
+  }, [registros]);
+
+  // Para meses pasados se compara la predicción con lo que realmente pasó
+  const esPasado = periodo < actual;
+  const filas = useMemo(() => {
+    const porCodigo = new Map(preds.map((p) => [p.unidad, p]));
+    return activas
+      .map((u, i) => {
+        const pred = porCodigo.get(u.codigo);
+        const vars = calcularVariables(registros[i].historial, periodo, u.codigo);
+        let real: number | null = null;
+        if (esPasado) {
+          const fin = estadoUnidad(u, db.movimientos, cfg, inicio).find((p) => p.periodo === periodo);
+          if (fin) real = esMoroso({ periodo, cuota: fin.cuota, monto_pagado: fin.pagado, dias_retraso: fin.diasRetraso });
+        }
+        return { u, pred, vars, real };
+      })
+      .filter((f) => f.pred)
+      .sort((a, b) => b.pred!.probabilidad_morosidad - a.pred!.probabilidad_morosidad);
+  }, [preds, activas, registros, periodo, esPasado, db.movimientos, cfg, inicio]);
+
+  const alertas = filas.filter((f) => f.pred!.alerta);
+  const altos = alertas.filter((f) => f.pred!.riesgo === "alto").length;
+  const visibles = soloAlertas ? alertas : filas;
+  const morososReales = filas.filter((f) => f.real === 1).length;
+  const detectados = filas.filter((f) => f.real === 1 && f.pred!.alerta).length;
+  const cuota = activas[0]?.cuota || 280;
 
   return (
     <Shell rol="admin">
-      <div className="space-y-6">
-        {/* Encabezado y Estado del Motor */}
-        <div className="flex flex-wrap items-start justify-between gap-4">
+      <div className="space-y-5">
+        <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <div className="flex items-center gap-2">
-              <h1 className="h1">Alertas Preventivas de Morosidad</h1>
-              <span className="rounded-full bg-indigo-100 text-indigo-800 text-xs px-2.5 py-0.5 font-bold uppercase tracking-wider">
-                Machine Learning · US12
-              </span>
-            </div>
-            <p className="muted mt-1">
-              Evaluación predictiva ejecutada el día 7 del mes (3 días antes del vencimiento del día {cfg.diaVencimiento}).
-              Anticipa qué departamentos incurrirán en morosidad para disparar cobranza preventiva por WhatsApp (US13).
+            <h1 className="h1">Alertas de morosidad (US12)</h1>
+            <p className="muted mt-1 max-w-2xl">
+              El modelo estima qué unidades caerán en mora en el mes elegido usando solo los pagos registrados antes del
+              día 1. Sirve para recordarles antes del vencimiento (día {cfg.diaVencimiento}).
             </p>
           </div>
-
-          <div className="flex flex-col items-end gap-1.5">
-            <div className="flex items-center gap-2 text-xs">
-              <span className="text-slate-500 font-medium">Motor de Inferencia:</span>
-              {backendStatus === "online" ? (
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300">
-                  <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-                  FastAPI Backend Online (Python:8000)
-                </span>
-              ) : (
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-800 border border-sky-300" title="Inferencia matemática exacta ejecutándose en el cliente sin depender de servidores caídos">
-                  <span className="w-2 h-2 rounded-full bg-sky-500"></span>
-                  Motor ML Resiliente (Local/Cloud Run)
-                </span>
-              )}
+          <div className="text-right text-xs text-slate-500 space-y-0.5">
+            <div>
+              Cálculo:{" "}
+              <span className="font-semibold text-slate-700">
+                {motor === "cargando" ? "…" : motor === "api" ? "API de Python (FastAPI)" : "en el navegador (misma fórmula)"}
+              </span>
             </div>
-            <span className="text-[11px] text-slate-400 font-mono">
-              Modelo: Regresión Logística L2 (C=0.25) · Recall Test: 94.7%
-            </span>
+            <div>
+              {MODELO.modelo} · umbral {MODELO.umbral} · {MODELO.version}
+            </div>
           </div>
         </div>
 
-        {/* KPIs de Negocio */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-          <div className="card border-l-4 border-l-red-500">
-            <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Riesgo Alto (🔴)</div>
-            <div className="text-3xl font-extrabold text-red-600 mt-1">{totalAltos} <span className="text-xs font-normal text-slate-500">unidades</span></div>
-            <div className="text-xs text-red-700 mt-1">Probabilidad de mora ≥ 70%</div>
+          <div className="card">
+            <div className="text-xs text-slate-500">Unidades con alerta</div>
+            <div className="text-2xl font-bold">
+              {alertas.length} <span className="text-sm font-normal text-slate-500">de {filas.length}</span>
+            </div>
           </div>
-          <div className="card border-l-4 border-l-amber-500">
-            <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Riesgo Medio (🟡)</div>
-            <div className="text-3xl font-extrabold text-amber-600 mt-1">{totalMedios} <span className="text-xs font-normal text-slate-500">unidades</span></div>
-            <div className="text-xs text-amber-700 mt-1">Probabilidad entre 50% y 69%</div>
+          <div className="card">
+            <div className="text-xs text-slate-500">Riesgo alto (≥ 70 %)</div>
+            <div className="text-2xl font-bold text-red-700">{altos}</div>
           </div>
-          <div className="card border-l-4 border-l-emerald-500">
-            <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Riesgo Bajo (🟢)</div>
-            <div className="text-3xl font-extrabold text-emerald-600 mt-1">{totalBajos} <span className="text-xs font-normal text-slate-500">unidades</span></div>
-            <div className="text-xs text-emerald-700 mt-1">Pagadores puntuales habituales</div>
+          <div className="card">
+            <div className="text-xs text-slate-500">Cuotas en riesgo</div>
+            <div className="text-2xl font-bold">{soles(alertas.length * cuota)}</div>
           </div>
-          <div className="card border-l-4 border-l-indigo-600 bg-indigo-50/40">
-            <div className="text-xs font-semibold text-indigo-900 uppercase tracking-wide">Flujo en Riesgo Preventivo</div>
-            <div className="text-2xl font-black text-indigo-950 mt-1">{soles(cuotasEnRiesgo)}</div>
-            <div className="text-xs text-indigo-700 mt-1">Para proteger los S/ 7,800 del vigilante</div>
+          <div className="card">
+            {esPasado ? (
+              <>
+                <div className="text-xs text-slate-500">Morosos reales detectados</div>
+                <div className="text-2xl font-bold">
+                  {detectados} <span className="text-sm font-normal text-slate-500">de {morososReales}</span>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="text-xs text-slate-500">Mes evaluado</div>
+                <div className="text-lg font-bold">{nombrePeriodo(periodo, true)}</div>
+              </>
+            )}
           </div>
         </div>
 
-        {/* Filtros y Búsqueda */}
-        <div className="card space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div className="flex flex-wrap items-center gap-2">
-              <input
-                className="input max-w-xs"
-                placeholder="Buscar unidad o propietario..."
-                value={busqueda}
-                onChange={(e) => setBusqueda(e.target.value)}
-              />
-              <select
-                className="input text-sm py-1.5 max-w-[190px]"
-                value={filtroRiesgo}
-                onChange={(e) => setFiltroRiesgo(e.target.value)}
-              >
-                <option value="todos">Todos los niveles ({predicciones.length})</option>
-                <option value="alertas">Alertas Activas (Alto + Medio: {totalAltos + totalMedios})</option>
-                <option value="alto">Solo Riesgo Alto ({totalAltos})</option>
-                <option value="medio">Solo Riesgo Medio ({totalMedios})</option>
-                <option value="bajo">Solo Riesgo Bajo ({totalBajos})</option>
+        <div className="card space-y-3">
+          <div className="flex flex-wrap items-center gap-3">
+            <label className="text-sm">
+              Mes a predecir{" "}
+              <select className="input inline-block w-auto ml-1" value={periodo} onChange={(e) => setPeriodo(e.target.value)}>
+                {opciones.map((p) => (
+                  <option key={p} value={p}>
+                    {nombrePeriodo(p, true)}
+                    {p === actual ? " (mes actual)" : " (revisar con lo que pasó)"}
+                  </option>
+                ))}
               </select>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <label className="text-xs text-slate-500 font-medium">Periodo a predecir:</label>
-              <select
-                className="input py-1 text-xs max-w-[270px] font-semibold text-slate-800"
-                value={periodo}
-                onChange={(e) => setPeriodo(e.target.value)}
-              >
-                <option value="2026-10">Octubre 2026 (Evaluación APF3 · Test Set)</option>
-                <option value="2026-11">Noviembre 2026 (Proyección Entrante)</option>
-                <option value="2026-09">Setiembre 2026 (Histórico)</option>
-                <option value="2026-08">Agosto 2026 (Histórico)</option>
-                <option value="2026-07">Julio 2026 (Fiestas Patrias)</option>
-                <option value="2026-06">Junio 2026 (Histórico)</option>
-                <option value="2026-05">Mayo 2026 (Histórico)</option>
-                <option value="2026-04">Abril 2026 (Inicio operaciones)</option>
-              </select>
-            </div>
+            </label>
+            <label className="text-sm flex items-center gap-1.5">
+              <input type="checkbox" checked={soloAlertas} onChange={(e) => setSoloAlertas(e.target.checked)} />
+              Mostrar solo unidades con alerta
+            </label>
           </div>
 
-          {/* Tabla de Predicciones */}
           <div className="overflow-x-auto">
             <table className="tabla">
               <thead>
                 <tr>
                   <th>Unidad</th>
                   <th>Propietario</th>
-                  <th>Canal Habitual</th>
-                  <th className="text-center">Retraso t-1</th>
-                  <th className="text-center">Prom. 3 Meses</th>
-                  <th className="text-center">Puntualidad</th>
-                  <th className="text-center">Probabilidad Mora</th>
-                  <th className="text-center">Semáforo ML</th>
-                  <th>Factores Determinantes</th>
-                  <th className="text-center">Acción (US13)</th>
+                  <th className="text-center">Meses que debe</th>
+                  <th className="text-center">Pagos puntuales (3 m)</th>
+                  <th className="text-center">Probabilidad</th>
+                  <th className="text-center">Riesgo</th>
+                  <th>Motivos</th>
+                  {esPasado && <th className="text-center">¿Fue moroso?</th>}
+                  <th className="text-center">Recordatorio</th>
                 </tr>
               </thead>
               <tbody>
-                {prediccionesFiltradas.map(({ unidad, features, prediction }) => {
-                  const enlaceWsp = enlaceWhatsAppPreventivo(unidad, features, prediction, cfg.diaVencimiento);
-                  const canalTexto = features.canal_pago_habitual
-                    .replace("transferencia_nombre", "Transf. Titular")
-                    .replace("codigo_descripcion", "Código Unidad")
-                    .replace("yape_plin", "Yape / Plin")
-                    .replace("deposito_efectivo", "Depósito Efectivo");
-
-                  return (
-                    <tr key={unidad.id} className={prediction.nivel_riesgo === "ALTO" ? "bg-red-50/20" : ""}>
-                      <td className="font-bold text-slate-900">{unidad.codigo}</td>
-                      <td className="whitespace-nowrap font-medium text-slate-700">{unidad.propietario}</td>
-                      <td className="text-xs text-slate-600">{canalTexto}</td>
-                      <td className="text-center tabular-nums font-mono text-xs">
-                        {features.retraso_mes_anterior > 0 ? (
-                          <span className={features.retraso_mes_anterior > 15 ? "text-red-600 font-bold" : "text-amber-600"}>
-                            {features.retraso_mes_anterior}d
-                          </span>
-                        ) : (
-                          <span className="text-emerald-600">0d</span>
-                        )}
+                {visibles.map(({ u, pred, vars, real }) => (
+                  <tr key={u.id}>
+                    <td className="font-semibold">{u.codigo}</td>
+                    <td className="whitespace-nowrap">{u.propietario}</td>
+                    <td className="text-center tabular-nums">{vars.meses_deuda_previos}</td>
+                    <td className="text-center tabular-nums">{vars.pagos_puntuales_3m}</td>
+                    <td className="text-center tabular-nums font-semibold">{(pred!.probabilidad_morosidad * 100).toFixed(0)} %</td>
+                    <td className="text-center">
+                      <span className={`px-2 py-0.5 rounded border text-xs font-semibold ${ESTILO_RIESGO[pred!.riesgo]}`}>
+                        {pred!.riesgo.toUpperCase()}
+                      </span>
+                    </td>
+                    <td className="text-xs text-slate-600">{motivos(vars).join(" · ")}</td>
+                    {esPasado && (
+                      <td className="text-center text-xs">
+                        {real === null ? "-" : real === 1 ? <span className="text-red-700 font-semibold">Sí</span> : "No"}
                       </td>
-                      <td className="text-center tabular-nums font-mono text-xs">
-                        {features.promedio_retraso_3m.toFixed(1)}d
-                      </td>
-                      <td className="text-center tabular-nums font-mono text-xs">
-                        {(features.tasa_puntualidad_hist * 100).toFixed(0)}%
-                      </td>
-                      <td className="text-center">
-                        <div className="inline-flex items-center gap-1.5 font-mono font-bold text-xs">
-                          <div className="w-16 bg-slate-200 rounded-full h-2 overflow-hidden">
-                            <div
-                              className={`h-full ${
-                                prediction.probabilidad_mora >= 0.70
-                                  ? "bg-red-600"
-                                  : prediction.probabilidad_mora >= 0.50
-                                  ? "bg-amber-500"
-                                  : "bg-emerald-500"
-                              }`}
-                              style={{ width: `${Math.round(prediction.probabilidad_mora * 100)}%` }}
-                            />
-                          </div>
-                          <span>{(prediction.probabilidad_mora * 100).toFixed(1)}%</span>
-                        </div>
-                      </td>
-                      <td className="text-center">
-                        {prediction.nivel_riesgo === "ALTO" && (
-                          <span className="px-2 py-0.5 rounded text-[11px] font-bold bg-red-100 text-red-800 border border-red-300">
-                            ALTO
-                          </span>
-                        )}
-                        {prediction.nivel_riesgo === "MEDIO" && (
-                          <span className="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
-                            MEDIO
-                          </span>
-                        )}
-                        {prediction.nivel_riesgo === "BAJO" && (
-                          <span className="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
-                            BAJO
-                          </span>
-                        )}
-                      </td>
-                      <td className="text-xs text-slate-600 max-w-xs">
-                        <ul className="list-disc list-inside space-y-0.5 text-[11px]">
-                          {prediction.factores_riesgo.map((f, i) => (
-                            <li key={i}>{f}</li>
-                          ))}
-                        </ul>
-                      </td>
-                      <td className="text-center whitespace-nowrap">
-                        {prediction.prediccion_moroso === 1 ? (
-                          <a
-                            href={enlaceWsp}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-colors"
-                            title="Abrir WhatsApp Web con mensaje cordial prellenado para recordatorio preventivo"
-                          >
-                            <span>📲</span> Recordar
-                          </a>
-                        ) : (
-                          <span className="text-slate-400 text-xs">Puntual</span>
-                        )}
-                      </td>
-                    </tr>
-                  );
-                })}
+                    )}
+                    <td className="text-center">
+                      {pred!.alerta && !esPasado ? (
+                        <a
+                          className="btn text-xs py-1"
+                          href={enlaceWhatsApp(u, nombrePeriodo(periodo, true), cfg.diaVencimiento)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          WhatsApp
+                        </a>
+                      ) : (
+                        <span className="text-xs text-slate-400">-</span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+                {visibles.length === 0 && (
+                  <tr>
+                    <td colSpan={9} className="text-center text-slate-500 py-6">
+                      Ninguna unidad supera el umbral de alerta este mes.
+                    </td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>
+          <p className="text-xs text-slate-500">
+            La probabilidad solo la ve el administrador. El mensaje de WhatsApp es un recordatorio general y no menciona
+            puntajes ni deudas. Datos de entrenamiento simulados: los resultados son indicativos.
+          </p>
         </div>
 
-        {/* Panel del Simulador Interactivo para el Docente */}
-        <div className="card bg-slate-900 text-slate-100 p-6 rounded-xl space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-700 pb-3">
-            <div>
-              <h2 className="text-lg font-bold text-white flex items-center gap-2">
-                <span>🧪</span> Simulador Interactivo de Inferencia en Tiempo Real
-              </h2>
-              <p className="text-xs text-slate-300 mt-0.5">
-                Mueve los parámetros a continuación para ver cómo la función logística calcula la probabilidad de mora en vivo.
-              </p>
-            </div>
-            <span className="text-xs bg-slate-800 text-slate-300 border border-slate-700 px-3 py-1 rounded-full font-mono">
-              latencia: {prediccionSimulada.latencia_ms} ms
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
-            {/* Controles de entrada */}
-            <div className="space-y-3">
-              <div>
-                <label className="text-xs font-semibold text-slate-300 flex justify-between">
-                  <span>Retraso del mes anterior (t-1):</span>
-                  <span className="text-amber-400 font-mono">{simRetrasoAnt} días</span>
-                </label>
-                <input
-                  type="range"
-                  min="0"
-                  max="45"
-                  value={simRetrasoAnt}
-                  onChange={(e) => setSimRetrasoAnt(Number(e.target.value))}
-                  className="w-full accent-indigo-500 mt-1 cursor-pointer"
-                />
-              </div>
-
-              <div>
-                <label className="text-xs font-semibold text-slate-300 flex justify-between">
-                  <span>Promedio de retraso 3 meses:</span>
-                  <span className="text-amber-400 font-mono">{simProm3m} días</span>
-                </label>
-                <input
-                  type="range"
-                  min="0"
-                  max="40"
-                  value={simProm3m}
-                  onChange={(e) => setSimProm3m(Number(e.target.value))}
-                  className="w-full accent-indigo-500 mt-1 cursor-pointer"
-                />
-              </div>
-
-              <div>
-                <label className="text-xs font-semibold text-slate-300 flex justify-between">
-                  <span>Meses impagos acumulados:</span>
-                  <span className="text-amber-400 font-mono">{simDeudaPrev} meses</span>
-                </label>
-                <input
-                  type="range"
-                  min="0"
-                  max="3"
-                  value={simDeudaPrev}
-                  onChange={(e) => setSimDeudaPrev(Number(e.target.value))}
-                  className="w-full accent-indigo-500 mt-1 cursor-pointer"
-                />
-              </div>
-
-              <div>
-                <label className="text-xs font-semibold text-slate-300 flex justify-between">
-                  <span>Ratio de pago mes anterior (t-1):</span>
-                  <span className="text-amber-400 font-mono">{(simRatioAnt * 100).toFixed(0)}%</span>
-                </label>
-                <input
-                  type="range"
-                  min="0"
-                  max="1"
-                  step="0.1"
-                  value={simRatioAnt}
-                  onChange={(e) => setSimRatioAnt(Number(e.target.value))}
-                  className="w-full accent-indigo-500 mt-1 cursor-pointer"
-                />
-              </div>
-            </div>
-
-            {/* Controles categóricos */}
-            <div className="space-y-3">
-              <div>
-                <label className="text-xs font-semibold text-slate-300">Canal de pago habitual:</label>
-                <select
-                  className="input bg-slate-800 text-white border-slate-700 mt-1 text-xs w-full"
-                  value={simCanal}
-                  onChange={(e) => setSimCanal(e.target.value)}
-                >
-                  <option value="transferencia_nombre">Transferencia con nombre titular (-0.64 peso)</option>
-                  <option value="codigo_descripcion">Transferencia con código unidad (-0.41 peso)</option>
-                  <option value="yape_plin">Billetera Yape / Plin (+0.55 peso)</option>
-                  <option value="deposito_efectivo">Depósito en agente efectivo (+0.50 peso)</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="text-xs font-semibold text-slate-300">Bloque residencial:</label>
-                <div className="grid grid-cols-4 gap-2 mt-1">
-                  {["A", "B", "C", "D"].map((b) => (
-                    <button
-                      key={b}
-                      type="button"
-                      onClick={() => setSimBloque(b)}
-                      className={`py-1 text-xs font-bold rounded border ${
-                        simBloque === b
-                          ? "bg-indigo-600 border-indigo-500 text-white"
-                          : "bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700"
-                      }`}
-                    >
-                      {b}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <label className="text-xs font-semibold text-slate-300 flex justify-between">
-                  <span>Tasa histórica puntual:</span>
-                  <span className="text-amber-400 font-mono">{(simTasaPuntual * 100).toFixed(0)}%</span>
-                </label>
-                <input
-                  type="range"
-                  min="0"
-                  max="1"
-                  step="0.05"
-                  value={simTasaPuntual}
-                  onChange={(e) => setSimTasaPuntual(Number(e.target.value))}
-                  className="w-full accent-indigo-500 mt-1 cursor-pointer"
-                />
-              </div>
-            </div>
-
-            {/* Resultado de la simulación */}
-            <div className="bg-slate-800/80 border border-slate-700 p-4 rounded-lg flex flex-col justify-between">
-              <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-                  Predicción del Modelo ML
-                </div>
-                <div className="flex items-baseline gap-2 mt-2">
-                  <div className="text-4xl font-black font-mono text-white">
-                    {(prediccionSimulada.probabilidad_mora * 100).toFixed(1)}%
-                  </div>
-                  <span
-                    className={`text-xs font-bold px-2 py-0.5 rounded ${
-                      prediccionSimulada.nivel_riesgo === "ALTO"
-                        ? "bg-red-500/20 text-red-400 border border-red-500/40"
-                        : prediccionSimulada.nivel_riesgo === "MEDIO"
-                        ? "bg-amber-500/20 text-amber-400 border border-amber-500/40"
-                        : "bg-emerald-500/20 text-emerald-400 border border-emerald-500/40"
-                    }`}
-                  >
-                    RIESGO {prediccionSimulada.nivel_riesgo}
-                  </span>
-                </div>
-                <div className="text-xs text-slate-300 mt-2">
-                  Umbral de corte: 50.0% (Recall optimizado: 94.7%)
-                </div>
-              </div>
-
-              <div className="mt-3 pt-3 border-t border-slate-700/60">
-                <div className="text-[11px] text-slate-400 font-semibold uppercase">Acción disparada:</div>
-                <div className="text-xs text-slate-200 mt-1">
-                  {prediccionSimulada.prediccion_moroso === 1
-                    ? "🔴 Activa recordatorio preventivo por WhatsApp 3 días antes del vencimiento."
-                    : "🟢 No requiere recordatorio; comportamiento proyectado puntual."}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Simulador />
       </div>
     </Shell>
+  );
+}
+
+// Para la exposición: mover los datos de una unidad y ver cómo cambia la probabilidad
+function Simulador() {
+  const [deuda, setDeuda] = useState(0);
+  const [morosoAnt, setMorosoAnt] = useState(0);
+  const [puntuales, setPuntuales] = useState(2);
+  const [retraso, setRetraso] = useState(5);
+  const [tasa, setTasa] = useState(0.2);
+  const [mes, setMes] = useState("normal");
+  const [torre, setTorre] = useState("A");
+
+  const vars: VariablesML = {
+    meses_historial: 6,
+    meses_deuda_previos: deuda,
+    moroso_mes_anterior: morosoAnt,
+    tasa_morosidad_hist: tasa,
+    retraso_prom_3m: retraso,
+    pagos_puntuales_3m: puntuales,
+    es_mes_gratificacion: mes === "gratificacion" ? 1 : 0,
+    es_campana_escolar: mes === "marzo" ? 1 : 0,
+    torre,
+  };
+  const prob = probabilidad(vars);
+  const riesgo = nivelRiesgo(prob);
+
+  const fila = "flex items-center justify-between gap-3 text-sm";
+  return (
+    <div className="card space-y-3">
+      <h2 className="font-semibold">Simulador del modelo</h2>
+      <div className="grid md:grid-cols-2 gap-x-8 gap-y-3">
+        <label className={fila}>
+          Meses que debe: {deuda}
+          <input type="range" min={0} max={4} value={deuda} onChange={(e) => setDeuda(Number(e.target.value))} />
+        </label>
+        <label className={fila}>
+          Pagos puntuales en los últimos 3 meses: {puntuales}
+          <input type="range" min={0} max={3} value={puntuales} onChange={(e) => setPuntuales(Number(e.target.value))} />
+        </label>
+        <label className={fila}>
+          Retraso promedio (3 meses): {retraso} días
+          <input type="range" min={0} max={30} value={retraso} onChange={(e) => setRetraso(Number(e.target.value))} />
+        </label>
+        <label className={fila}>
+          % de meses en mora en su historial: {Math.round(tasa * 100)} %
+          <input type="range" min={0} max={1} step={0.05} value={tasa} onChange={(e) => setTasa(Number(e.target.value))} />
+        </label>
+        <label className={fila}>
+          ¿El mes pasado fue moroso?
+          <select className="input w-auto" value={morosoAnt} onChange={(e) => setMorosoAnt(Number(e.target.value))}>
+            <option value={0}>No</option>
+            <option value={1}>Sí</option>
+          </select>
+        </label>
+        <label className={fila}>
+          Mes
+          <select className="input w-auto" value={mes} onChange={(e) => setMes(e.target.value)}>
+            <option value="normal">Mes normal</option>
+            <option value="marzo">Marzo (campaña escolar)</option>
+            <option value="gratificacion">Julio o diciembre (gratificación)</option>
+          </select>
+        </label>
+        <label className={fila}>
+          Torre
+          <select className="input w-auto" value={torre} onChange={(e) => setTorre(e.target.value)}>
+            <option value="A">A</option>
+            <option value="B">B</option>
+          </select>
+        </label>
+      </div>
+      <div className="flex items-center gap-3 border-t pt-3">
+        <span className="text-sm">Probabilidad de mora:</span>
+        <span className="text-2xl font-bold tabular-nums">{(prob * 100).toFixed(1)} %</span>
+        <span className={`px-2 py-0.5 rounded border text-xs font-semibold ${ESTILO_RIESGO[riesgo]}`}>
+          {riesgo.toUpperCase()}
+        </span>
+      </div>
+    </div>
   );
 }

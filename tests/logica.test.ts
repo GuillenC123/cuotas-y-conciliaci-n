@@ -55,14 +55,22 @@ console.log("OK");
   console.log("imputación de pagos OK");
 }
 
-// Validación de la Inferencia de Machine Learning (APF3)
-import { extraerFeaturesUnidad, inferenciaLocal } from "../src/lib/ml";
+// Modelo de morosidad (APF3): la web debe dar la misma probabilidad que Python
+import { calcularVariables, probabilidad, predecirLocal, registroUnidad } from "../src/lib/ml";
+import casos from "../ml/casos_paridad.json";
 {
-  const u101 = db.unidades.find((u) => u.codigo === "A-101")!;
-  const ft = extraerFeaturesUnidad(u101, db.movimientos, db.config!, "2026-11");
-  const pred = inferenciaLocal(ft);
-  console.log("Predicción ML A-101:", pred.nivel_riesgo, `${(pred.probabilidad_mora * 100).toFixed(1)}%`);
-  assert.ok(["ALTO", "MEDIO", "BAJO"].includes(pred.nivel_riesgo));
-  assert.ok(pred.probabilidad_mora >= 0 && pred.probabilidad_mora <= 1);
-  console.log("Inferencia ML OK");
+  let maxDif = 0;
+  for (const c of casos as { unidad: string; periodo_objetivo: string; historial: any[]; probabilidad: number }[]) {
+    const p = probabilidad(calcularVariables(c.historial, c.periodo_objetivo, c.unidad));
+    maxDif = Math.max(maxDif, Math.abs(p - c.probabilidad));
+  }
+  assert.ok(maxDif < 1e-9, `diferencia con Python: ${maxDif}`);
+  console.log(`modelo ML: ${casos.length} casos iguales a Python (dif. máx. ${maxDif.toExponential(1)})`);
+
+  // con los datos de ejemplo del MVP: historial al día 1 del mes actual, sin pagos de ese mes
+  const actual = periodoActual();
+  const preds = db.unidades.map((u) => predecirLocal(registroUnidad(u, db.movimientos, db.config!, actual)));
+  const reg = registroUnidad(db.unidades[0], db.movimientos, db.config!, actual);
+  assert.ok(reg.historial.every((h) => h.periodo < actual));
+  console.log(`alertas ML ${actual}: ${preds.filter((p) => p.alerta).length} de ${preds.length} unidades`);
 }

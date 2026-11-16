@@ -1,0 +1,10 @@
+{
+  "unidad": "B-304",
+  "periodo_objetivo": "2026-11",
+  "probabilidad_morosidad": 0.981,
+  "umbral": 0.6,
+  "riesgo": "alto",
+  "alerta": true,
+  "accion": "Enviar recordatorio antes del día 10",
+  "version_modelo": "morosidad-v1"
+}

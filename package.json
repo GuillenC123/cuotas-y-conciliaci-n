@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "npx --yes tsx@4.19.1 tests/logica.test.ts",
-    "api": "python api_ml.py"
+    "api": "cd ml && python -m uvicorn api_ml:app --port 8000"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",

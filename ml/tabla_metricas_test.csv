@@ -1,0 +1,8 @@
+,accuracy,precision,recall,F1,alertas
+Línea base 1: siempre 'al día',0.736,0.0,0.0,0.0,0.0
+Línea base 2: regla actual (ya debe),0.861,0.75,0.711,0.73,36.0
+Regresión logística (umbral 0.5),0.868,0.702,0.868,0.776,47.0
+KNN (umbral 0.5),0.854,0.743,0.684,0.712,35.0
+Árbol de decisión (umbral 0.5),0.868,0.702,0.868,0.776,47.0
+Gradient Boosting (umbral 0.5),0.875,0.778,0.737,0.757,36.0
+Regresión logística · umbral 0.6 (SELECCIONADO),0.868,0.702,0.868,0.776,47.0

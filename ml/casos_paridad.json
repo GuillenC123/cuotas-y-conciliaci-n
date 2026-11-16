@@ -1,0 +1,3794 @@
+[
+ {
+  "unidad": "A-101",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 42
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 11
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 47
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 31
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 101
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 70
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 40
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 47
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 42
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.9230994431306583
+ },
+ {
+  "unidad": "A-102",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.12741982891648548
+ },
+ {
+  "unidad": "A-103",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 4
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 13
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 11
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 5
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 6
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 5
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 17
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 27
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 1
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 11
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.9318061664688301
+ },
+ {
+  "unidad": "A-104",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 12
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.12741982891648548
+ },
+ {
+  "unidad": "A-201",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 3
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 31
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.12831721870971913
+ },
+ {
+  "unidad": "A-202",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 35
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 4
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 11
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.12831721870971913
+ },
+ {
+  "unidad": "A-203",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 13
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 10
+   }
+  ],
+  "probabilidad": 0.262508076693792
+ },
+ {
+  "unidad": "A-204",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.12741982891648548
+ },
+ {
+  "unidad": "A-301",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 7
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 7
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 8
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 10
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 9
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 72
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 88
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 89
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 103
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.9818962578285998
+ },
+ {
+  "unidad": "A-302",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.12741982891648548
+ },
+ {
+  "unidad": "A-303",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 46
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 71
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 50
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 19
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 1
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.13104286947738225
+ },
+ {
+  "unidad": "A-304",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 22
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 19
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 26
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 26
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 31
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 4
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.2747833197112138
+ },
+ {
+  "unidad": "A-401",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 12
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 8
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.8436237927727442
+ },
+ {
+  "unidad": "A-402",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 11
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 51
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 56
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 25
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 9
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.1301292634341916
+ },
+ {
+  "unidad": "A-403",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.12741982891648548
+ },
+ {
+  "unidad": "A-404",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 17
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 49
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 140
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 109
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 81
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 172
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 158
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 140.0,
+    "dias_retraso": 127
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.9961578304458307
+ },
+ {
+  "unidad": "A-501",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 8
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 17
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 11
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 18
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 42
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 93
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 63
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 32
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 37
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 6
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 39
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.9291791486675322
+ },
+ {
+  "unidad": "A-502",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.12741982891648548
+ },
+ {
+  "unidad": "A-503",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 6
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 4
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 7
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 12
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 16
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 6
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 45
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 14
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 11
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 16
+   }
+  ],
+  "probabilidad": 0.8648668926272668
+ },
+ {
+  "unidad": "A-504",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 14
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.12741982891648548
+ },
+ {
+  "unidad": "A-601",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 31
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 1
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.12831721870971913
+ },
+ {
+  "unidad": "A-602",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 18
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 15
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 47
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 46
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 18
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 16
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 15
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 12
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 6
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 33
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.9281120837926914
+ },
+ {
+  "unidad": "A-603",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 61
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 85
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 55
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 24
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 27
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.13196302324894368
+ },
+ {
+  "unidad": "A-604",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 2
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 1
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 40
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 9
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 19
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 132
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 101
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 71
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 80
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.9622867231312644
+ },
+ {
+  "unidad": "B-101",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 27
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.1184967839707322
+ },
+ {
+  "unidad": "B-102",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 184
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 243
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 212
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 181
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 183
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 152
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 122
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 120
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 140.0,
+    "dias_retraso": 90
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.991030561816603
+ },
+ {
+  "unidad": "B-103",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 2
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 7
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 4
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 44
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 38
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 7
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 62
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 73
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.958208553159958
+ },
+ {
+  "unidad": "B-104",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 22
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.23862893378399114
+ },
+ {
+  "unidad": "B-201",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 1
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.11765880336204175
+ },
+ {
+  "unidad": "B-202",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.11765880336204175
+ },
+ {
+  "unidad": "B-203",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 15
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 14
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 16
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 1
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 10
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 6
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 13
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 15
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 5
+   }
+  ],
+  "probabilidad": 0.6581390401302825
+ },
+ {
+  "unidad": "B-204",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 26
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 31
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 54
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 26
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.1210428004611406
+ },
+ {
+  "unidad": "B-301",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 17
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 7
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 15
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 15
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 4
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 12
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.9242201053816356
+ },
+ {
+  "unidad": "B-302",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 32
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 2
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 33
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 73
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 45
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 14
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 6
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 81
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 51
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 20
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 34
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 4
+   }
+  ],
+  "probabilidad": 0.6532966454022169
+ },
+ {
+  "unidad": "B-303",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 13
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 3
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 26
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 90
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 88
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 104
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 74
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 43
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 36
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 5
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 27
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.9240091491912393
+ },
+ {
+  "unidad": "B-304",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 165
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 162
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 167
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 136
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 108
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 99
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 102
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 71
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 41
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.9809751082887284
+ },
+ {
+  "unidad": "B-401",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 14
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 40
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 9
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 68
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 63
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 32
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 2
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 11
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 16
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 36
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 0.0,
+    "dias_retraso": null
+   }
+  ],
+  "probabilidad": 0.8265604690762486
+ },
+ {
+  "unidad": "B-402",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.11765880336204175
+ },
+ {
+  "unidad": "B-403",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 13
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 6
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 11
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 7
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 30
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 35
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 5
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 11
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 5
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.25176133244183446
+ },
+ {
+  "unidad": "B-404",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 15
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 27
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 22
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 25
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.12018926992017429
+ },
+ {
+  "unidad": "B-501",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 29
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 21
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 28
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.12018926992017429
+ },
+ {
+  "unidad": "B-502",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.11765880336204175
+ },
+ {
+  "unidad": "B-503",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 22
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 54
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 24
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.12018926992017429
+ },
+ {
+  "unidad": "B-504",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 12
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 13
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 9
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 9
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 17
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 69
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 38
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 8
+   }
+  ],
+  "probabilidad": 0.6321374859763924
+ },
+ {
+  "unidad": "B-601",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.11765880336204175
+ },
+ {
+  "unidad": "B-602",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   }
+  ],
+  "probabilidad": 0.11765880336204175
+ },
+ {
+  "unidad": "B-603",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 36
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 45
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 14
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 12
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 17
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 4
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 16
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 16
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 36
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 5
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 7
+   }
+  ],
+  "probabilidad": 0.46134400435909845
+ },
+ {
+  "unidad": "B-604",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+   {
+    "periodo": "2025-11",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2025-12",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-01",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-02",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-03",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-04",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 8
+   },
+   {
+    "periodo": "2026-05",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 10
+   },
+   {
+    "periodo": "2026-06",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 5
+   },
+   {
+    "periodo": "2026-07",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 7
+   },
+   {
+    "periodo": "2026-08",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 0
+   },
+   {
+    "periodo": "2026-09",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 13
+   },
+   {
+    "periodo": "2026-10",
+    "cuota": 280.0,
+    "monto_pagado": 280.0,
+    "dias_retraso": 10
+   }
+  ],
+  "probabilidad": 0.4392937513394106
+ }
+]

@@ -1,0 +1,58 @@
+{
+  "version": "morosidad-v1",
+  "modelo": "Regresión logística",
+  "umbral": 0.6,
+  "variables_num": [
+    "meses_historial",
+    "meses_deuda_previos",
+    "moroso_mes_anterior",
+    "tasa_morosidad_hist",
+    "retraso_prom_3m",
+    "pagos_puntuales_3m",
+    "es_mes_gratificacion",
+    "es_campana_escolar"
+  ],
+  "media": [
+    4.5,
+    0.4583333333333333,
+    0.28125,
+    0.23660182291666665,
+    8.943880208333335,
+    1.4140625,
+    0.25,
+    0.125
+  ],
+  "escala": [
+    2.29128784747792,
+    1.039998664529057,
+    0.4496092053105675,
+    0.33079157086608474,
+    10.700288732291291,
+    1.2386611371801477,
+    0.4330127018922193,
+    0.33071891388307384
+  ],
+  "columnas": [
+    "num__meses_historial",
+    "num__meses_deuda_previos",
+    "num__moroso_mes_anterior",
+    "num__tasa_morosidad_hist",
+    "num__retraso_prom_3m",
+    "num__pagos_puntuales_3m",
+    "num__es_mes_gratificacion",
+    "num__es_campana_escolar",
+    "cat__torre_B"
+  ],
+  "coeficientes": [
+    0.20200999929605795,
+    0.7926073788838279,
+    0.5053855637150084,
+    0.03195556537987273,
+    -0.11893938454722436,
+    -1.1494881777162382,
+    -0.04873428434503031,
+    0.5417170730772829,
+    -0.09082272391144253
+  ],
+  "intercepto": -0.34793575870225085
+}

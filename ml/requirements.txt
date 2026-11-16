@@ -1,0 +1,12 @@
+# Probado de inicio a fin con:
+#   Python 3.13 · numpy 2.5.3 · pandas 3.0.5 · scikit-learn 1.9.1 · matplotlib 3.11.2 · joblib 1.6.0
+#   Python 3.12 · numpy 2.0.2 · pandas 2.2.2 · scikit-learn 1.6.1 · matplotlib 3.10.0 · joblib 1.4.2 (similar a Colab)
+# En ambos entornos salen las mismas métricas.
+numpy>=2.0
+pandas>=2.2
+scikit-learn>=1.6
+matplotlib>=3.8
+joblib>=1.4
+# Solo para la API de integración (api_ml.py)
+fastapi>=0.110
+uvicorn>=0.29

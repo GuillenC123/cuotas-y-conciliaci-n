@@ -1,0 +1,78 @@
+{
+  "unidad": "B-304",
+  "periodo_objetivo": "2026-11",
+  "historial": [
+    {
+      "periodo": "2025-11",
+      "cuota": 280.0,
+      "monto_pagado": 280.0,
+      "dias_retraso": 165
+    },
+    {
+      "periodo": "2025-12",
+      "cuota": 280.0,
+      "monto_pagado": 280.0,
+      "dias_retraso": 162
+    },
+    {
+      "periodo": "2026-01",
+      "cuota": 280.0,
+      "monto_pagado": 280.0,
+      "dias_retraso": 167
+    },
+    {
+      "periodo": "2026-02",
+      "cuota": 280.0,
+      "monto_pagado": 280.0,
+      "dias_retraso": 136
+    },
+    {
+      "periodo": "2026-03",
+      "cuota": 280.0,
+      "monto_pagado": 280.0,
+      "dias_retraso": 108
+    },
+    {
+      "periodo": "2026-04",
+      "cuota": 280.0,
+      "monto_pagado": 280.0,
+      "dias_retraso": 99
+    },
+    {
+      "periodo": "2026-05",
+      "cuota": 280.0,
+      "monto_pagado": 280.0,
+      "dias_retraso": 102
+    },
+    {
+      "periodo": "2026-06",
+      "cuota": 280.0,
+      "monto_pagado": 280.0,
+      "dias_retraso": 71
+    },
+    {
+      "periodo": "2026-07",
+      "cuota": 280.0,
+      "monto_pagado": 280.0,
+      "dias_retraso": 41
+    },
+    {
+      "periodo": "2026-08",
+      "cuota": 280.0,
+      "monto_pagado": 0.0,
+      "dias_retraso": null
+    },
+    {
+      "periodo": "2026-09",
+      "cuota": 280.0,
+      "monto_pagado": 0.0,
+      "dias_retraso": null
+    },
+    {
+      "periodo": "2026-10",
+      "cuota": 280.0,
+      "monto_pagado": 0.0,
+      "dias_retraso": null
+    }
+  ]
+}

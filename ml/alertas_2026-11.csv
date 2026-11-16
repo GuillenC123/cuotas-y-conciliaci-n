@@ -1,0 +1,49 @@
+unidad,periodo_objetivo,probabilidad_morosidad,umbral,riesgo,alerta,accion,version_modelo
+A-404,2026-11,0.996,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+B-102,2026-11,0.991,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+A-301,2026-11,0.982,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+B-304,2026-11,0.981,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+A-604,2026-11,0.962,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+B-103,2026-11,0.958,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+A-103,2026-11,0.932,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+A-501,2026-11,0.929,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+A-602,2026-11,0.928,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+B-301,2026-11,0.924,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+B-303,2026-11,0.924,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+A-101,2026-11,0.923,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+A-503,2026-11,0.865,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+A-401,2026-11,0.844,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+B-401,2026-11,0.827,0.6,alto,True,Enviar recordatorio antes del día 10,morosidad-v1
+B-203,2026-11,0.658,0.6,medio,True,Enviar recordatorio antes del día 10,morosidad-v1
+B-302,2026-11,0.653,0.6,medio,True,Enviar recordatorio antes del día 10,morosidad-v1
+B-504,2026-11,0.632,0.6,medio,True,Enviar recordatorio antes del día 10,morosidad-v1
+B-603,2026-11,0.461,0.6,bajo,False,Sin acción,morosidad-v1
+B-604,2026-11,0.439,0.6,bajo,False,Sin acción,morosidad-v1
+A-304,2026-11,0.275,0.6,bajo,False,Sin acción,morosidad-v1
+A-203,2026-11,0.263,0.6,bajo,False,Sin acción,morosidad-v1
+B-403,2026-11,0.252,0.6,bajo,False,Sin acción,morosidad-v1
+B-104,2026-11,0.239,0.6,bajo,False,Sin acción,morosidad-v1
+A-603,2026-11,0.132,0.6,bajo,False,Sin acción,morosidad-v1
+A-303,2026-11,0.131,0.6,bajo,False,Sin acción,morosidad-v1
+A-402,2026-11,0.13,0.6,bajo,False,Sin acción,morosidad-v1
+A-601,2026-11,0.128,0.6,bajo,False,Sin acción,morosidad-v1
+A-201,2026-11,0.128,0.6,bajo,False,Sin acción,morosidad-v1
+A-202,2026-11,0.128,0.6,bajo,False,Sin acción,morosidad-v1
+A-102,2026-11,0.127,0.6,bajo,False,Sin acción,morosidad-v1
+A-204,2026-11,0.127,0.6,bajo,False,Sin acción,morosidad-v1
+A-403,2026-11,0.127,0.6,bajo,False,Sin acción,morosidad-v1
+A-302,2026-11,0.127,0.6,bajo,False,Sin acción,morosidad-v1
+A-104,2026-11,0.127,0.6,bajo,False,Sin acción,morosidad-v1
+A-502,2026-11,0.127,0.6,bajo,False,Sin acción,morosidad-v1
+A-504,2026-11,0.127,0.6,bajo,False,Sin acción,morosidad-v1
+B-204,2026-11,0.121,0.6,bajo,False,Sin acción,morosidad-v1
+B-503,2026-11,0.12,0.6,bajo,False,Sin acción,morosidad-v1
+B-404,2026-11,0.12,0.6,bajo,False,Sin acción,morosidad-v1
+B-501,2026-11,0.12,0.6,bajo,False,Sin acción,morosidad-v1
+B-201,2026-11,0.118,0.6,bajo,False,Sin acción,morosidad-v1
+B-101,2026-11,0.118,0.6,bajo,False,Sin acción,morosidad-v1
+B-202,2026-11,0.118,0.6,bajo,False,Sin acción,morosidad-v1
+B-402,2026-11,0.118,0.6,bajo,False,Sin acción,morosidad-v1
+B-502,2026-11,0.118,0.6,bajo,False,Sin acción,morosidad-v1
+B-602,2026-11,0.118,0.6,bajo,False,Sin acción,morosidad-v1
+B-601,2026-11,0.118,0.6,bajo,False,Sin acción,morosidad-v1

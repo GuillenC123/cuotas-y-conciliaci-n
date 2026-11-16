@@ -1,0 +1,17 @@
+EVIDENCIA DE INTEGRACIÓN · APF3 Grupo 5
+Fecha de ejecución: 2026-11-16 12:13 (hora de Lima)
+Servicio: npm run api  (python -m uvicorn api_ml:app --port 8000, modelo_morosidad.joblib)
+
+$ curl http://localhost:8000/health
+{"estado":"ok","modelo":"Regresión logística","version":"morosidad-v1","umbral":0.6}
+
+$ curl -X POST http://localhost:8000/api/v1/predecir-morosidad -H 'Content-Type: application/json' -d @ejemplo_entrada.json
+{"unidad":"B-304","periodo_objetivo":"2026-11","probabilidad_morosidad":0.981,"umbral":0.6,"riesgo":"alto","alerta":true,"accion":"Enviar recordatorio antes del día 10","version_modelo":"morosidad-v1","latencia_ms":6.52}
+
+Llamadas hechas por la pantalla Alertas ML del MVP (localhost:3000) y por curl, según el registro del servidor:
+INFO:     127.0.0.1:51288 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36486 - "POST /api/v1/predecir-lote HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36486 - "POST /api/v1/predecir-lote HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36486 - "POST /api/v1/predecir-lote HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44620 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44636 - "POST /api/v1/predecir-morosidad HTTP/1.1" 200 OK
